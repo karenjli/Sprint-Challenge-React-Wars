@@ -4,6 +4,7 @@ import './App.css';
 import CharacterCard from "./components/CharacterCard"
 import styled from "styled-components"
 
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -17,6 +18,7 @@ const App = () => {
     // const [gender, setGender] = useState ([]);
     const [page, setPage] = useState (1);
     const [results, setResults] = useState ([]);
+   
 
     const CardBox = styled.div`
       display: flex;
@@ -61,6 +63,12 @@ const App = () => {
       <CardBox>
           {results.map (char => <CharacterCard name={char.name} height = {char.height} mass = {char.mass} hair={char.hair_color} skin={char.skin_color} eye={char.eye_color} birth={char.birth_year} gender={char.gender} />)}
       </CardBox>
+      <div className="button">
+           <button onClick="
+                {newPage.map(char => <CharacterCard name={char.name} height = {char.height} mass = {char.mass} hair={char.hair_color} skin={char.skin_color} eye={char.eye_color} birth={char.birth_year} gender={char.gender} />)}
+            ">Next</button>
+      </div>
+    
     </div>
      
     
